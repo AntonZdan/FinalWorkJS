@@ -29,7 +29,8 @@ form {
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    ;
 
 }
 
@@ -54,7 +55,7 @@ button {
 
 }
 
-#addBtn{
+#addBtn {
     width: 150px;
     margin: 0 auto;
 }
@@ -66,19 +67,61 @@ button:hover {
 
 
 #title,
-#cancelBtn{
-    display:none;
+#cancelBtn {
+    display: none;
 }
 
 #output {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    
+
 }
 
-@media (max-width: 768px){
-    #main-container{
+.notification {
+    text-align: center;
+    margin-top: 5em;
+    color: brown;
+    font-family: italic;
+    font-weight: 800;
+    font-size: 24px;
+}
+
+#error-message {
+    color: #ff2200;
+    text-align: center;
+    font-family: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#main-container {
+    background-image: url(https://t4.ftcdn.net/jpg/10/27/08/31/360_F_1027083125_CctAY0dbkVkVi1D8dYnoGJayzHtMmFR8.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: #7e3d33 0px 60px 40px -7px;
+
+}
+
+.titleText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-trash-alt{
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #main-container {
         width: 200px;
         margin: 0 auto;
     }
