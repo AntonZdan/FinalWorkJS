@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Tagesschrift';
+}
+body{
+    background: #bc958f;
+}
+
+.headingText{
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    color:rgb(52, 44, 60)
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 10px auto;
+}
+
+#title,
+#note{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+#note{
+    padding: 10px 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0 auto;
+}
+button{
+    padding: 7px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    background: rgb(84, 128, 143);
+    color: white;
+    font-weight: 600;
+    
+}
+
+button:hover{
+    background: lightblue;
+    color: black;
+}
+
+#output{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1000px;
+}
+
