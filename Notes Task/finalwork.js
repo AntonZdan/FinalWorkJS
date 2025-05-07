@@ -7,24 +7,36 @@ const form = document.querySelector('form');
 const body = document.querySelector('body');
 const emptyNoteBook = document.createElement('h1');
 
+note.onclick = function() {
+    title.style.cssText = 'display: block';
+    cancelBtn.style.cssText = 'display: block';
+}
+
+cancelBtn.onclick = function() {
+    title.style.cssText = 'display: none';
+    cancelBtn.style.cssText = 'display: none';
+    title.value = '';
+    note.value = '';
+}
+
 window.addEventListener('load', ()=>{ // Kai nera nei vieno priminimo, per viduri atsiranda uzrasas.
-        emptyNoteBook.textContent = 'Oops! Your Notebook is empty!...'
-        body.appendChild(emptyNoteBook);
-        emptyNoteBook.style.cssText = 'text-align: center; margin-top: 5em; color: red; font-family: normal; font-weight: 800; font-size: 24px';
+    emptyNoteBook.textContent = 'Oops! Your Notebook is empty!...'
+    body.appendChild(emptyNoteBook);
+    emptyNoteBook.style.cssText = 'text-align: center; margin-top: 5em; color: brown; font-family: italic; font-weight: 800; font-size: 24px';
 })
 
-addBtn.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
     event.preventDefault();
-    titleValue = title.value;
-    noteValue = note.value;
-
+   const titleValue = title.value;
+   const noteValue = note.value;
+    
     if (!titleValue || !noteValue) {
         if (!form.querySelector('#error-message')) {
             const emptyValue = document.createElement('p')
             emptyValue.setAttribute('id', 'error-message')
             emptyValue.textContent = 'Please write Title and Note to add them in your NoteBook!';
-            emptyValue.style.cssText = 'color: #ff2200; text-align: center; font-family: normal';
-            form.append(emptyValue);
+            emptyValue.style.cssText = 'color: #ff2200; text-align: center; font-family: normal; margin-top: 20px; margin-bottom: 20px';
+            form.insertBefore(emptyValue, addBtn);
         }
     }
     else {
@@ -33,6 +45,7 @@ addBtn.addEventListener('click', (event) => {
             existingError.remove();
         }
         const div = document.createElement('div');
+        div.setAttribute('id', 'main-container');
         const titleText = document.createElement('div');
         const h4 = document.createElement('h4');
         const p = document.createElement('p');
@@ -54,7 +67,7 @@ addBtn.addEventListener('click', (event) => {
         div.append(titleText);
         div.append(p);
         //Idedu viska i outputa
-        output.append(div);
+        output.prepend(div);
         
         let savedNotes = JSON.parse(localStorage.getItem('savedNotes') || '[]'); // sukuriu masyva localstorage ir saugoju tuos notes;
         const noteId = Date.now();
