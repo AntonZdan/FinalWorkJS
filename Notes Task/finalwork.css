@@ -75,6 +75,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
 
 }
 
@@ -100,7 +101,6 @@ button:hover {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     background-position: center;
     width: 200px;
     height: 200px;
@@ -116,13 +116,47 @@ button:hover {
     justify-content: space-between;
 }
 
-.fa-trash-alt{
+.fa-trash-alt {
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
+
+    #output{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
     #main-container {
         width: 200px;
         margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
-}
+
+    #title,
+    #note {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        justify-content: center;
+        
+    }
+
+    form{
+        width: 300px;
+    }
+
+    .buttons{
+        width: 300px;
+    }
+
+    .headingText {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto 2em;
+        margin-top: 30px;
+    }
+
+    }
