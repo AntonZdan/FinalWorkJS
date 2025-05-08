@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(186, 234, 249);
+}
+
+.my-password{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    background-image: url('https://img.freepik.com/premium-vector/cybersecurity-information-network-protection-future-technology-web-services-business-internet-project_118331-1189.jpg?semt=ais_hybrid&w=740');
+    background-size: cover;
+}
+
+form div{
+    margin-bottom: 10px;
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#psw-length{
+    width: 50px;
+}
+
+button{
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
