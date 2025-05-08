@@ -50,5 +50,15 @@ button{
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    background-color: rgb(102, 134, 144);
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+button:hover{
+    background-color: rgb(197, 236, 248);
+    color: black;
 }
 

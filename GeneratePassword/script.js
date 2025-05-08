@@ -34,9 +34,13 @@ form.addEventListener('submit', (event) => {
         const randomIndex = Math.floor(Math.random() * chars.length);
         password += chars[randomIndex];
     }
-    
-    const output = document.createElement('div')
-    output.setAttribute('id', 'generated-password');
-    container.append(output);
+
+    let output = document.querySelector('#generated-password');
+    if (!output) {
+         output = document.createElement('div');
+        output.setAttribute('id', 'generated-password');
+        container.appendChild(output);  
+    }
+
     output.textContent = password;
 })
