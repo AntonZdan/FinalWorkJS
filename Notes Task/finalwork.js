@@ -21,7 +21,7 @@ cancelBtn.onclick = function() {
 }
 
 window.addEventListener('load', ()=>{ // Kai nera nei vieno priminimo, per viduri atsiranda uzrasas.
-    emptyNoteBook.textContent = 'Oops! Your Notebook is empty!...'
+    emptyNoteBook.textContent = `Click 'Add Note' to add your first sticky.`
     body.appendChild(emptyNoteBook);
     
 })
@@ -35,7 +35,7 @@ form.addEventListener('submit', (event) => {
         if (!form.querySelector('#error-message')) {
             const emptyValue = document.createElement('p')
             emptyValue.setAttribute('id', 'error-message')
-            emptyValue.textContent = 'Please write Title and Note to add them in your NoteBook!';
+            emptyValue.textContent = 'Please fill in the inputs so I can add them to your notebook!';
             form.insertBefore(emptyValue, addBtn);
         }
     }
@@ -49,7 +49,9 @@ form.addEventListener('submit', (event) => {
         const titleText = document.createElement('div');
         titleText.classList.add('titleText');
         const h4 = document.createElement('h4');
+        h4.classList.add('noteTitle');
         const p = document.createElement('p');
+        p.classList.add('description');
         const icon = document.createElement('i');
         icon.setAttribute('class', 'fas fa-trash-alt');
         h4.textContent = titleValue;
