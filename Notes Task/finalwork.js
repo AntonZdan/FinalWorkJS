@@ -99,8 +99,8 @@ form.addEventListener('submit', (event) => {
                 h4.style.textDecoration = 'none';
                 
             }else{
-                p.style.cssText = 'text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 3px';
-                h4.style.cssText = 'text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 3px';
+                p.style.cssText = 'text-decoration: line-through; text-decoration-color: grey; text-decoration-thickness: 2px';
+                h4.style.cssText = 'text-decoration: line-through; text-decoration-color: grey; text-decoration-thickness: 2px';
             }
         }
 
