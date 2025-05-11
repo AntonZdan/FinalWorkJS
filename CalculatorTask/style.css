@@ -4,17 +4,26 @@
 }
 
 body{
-    background-image: url('https://img.freepik.com/free-vector/gradient-numerology-background_23-2150051046.jpg');
-    background-size: cover;
+    background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 main{
     display: flex;
     margin: 0 auto;
-    width: 500px;
-    margin-top: 17em;
+    width: 350px;
+    height: 450px;
+    background: lightgrey;
+    margin-top: 10em;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .numbers{
 display: grid;
 gap: 2px;
@@ -23,16 +32,41 @@ gap: 2px;
 button{
     padding:  20px;
     border: none;
-    background: rgb(186, 232, 248);
-    color: black;
+    background: rgb(144, 148, 149);
+    color: rgb(255, 255, 255);
     font-size: 24px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-.display {
-    grid-column: 1 / 4; 
-    grid-row: 1; 
+button:hover{
+    background: black;
+    color: white;
+}
+
+.divide,
+.multiply,
+.minus,
+.plus,
+.equals{
+    background: orange;
+    color: white;
+}
+
+.screen{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: rgb(215, 247, 254);
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding-right: 10px;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .ac {
