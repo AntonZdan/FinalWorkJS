@@ -54,6 +54,12 @@ button:hover{
     color: white;
 }
 
+.ac,
+.del{
+    background: white;
+    color: black;
+}
+
 .screen{
     display: flex;
     justify-content: right;
@@ -66,7 +72,8 @@ button:hover{
     border-radius: 5px;
     padding-right: 10px;
     margin-top: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgb(204, 219, 232) 5px 5px 12px 2px inset, rgba(255, 255, 255, 0.5) 6px 6px 12px 2px inset;
+    color: darkgrey;
 }
 
 .ac {
