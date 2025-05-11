@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <h1>Generate Password</h1>
+    <h1>Generate your first Password!</h1>
     <div class="my-password">
     <form action="">
         <div>
             <label for="psw-length">Password Length:</label>
-            <input type="text" name="psw-length" id="psw-length">
+            <input type="text" name="psw-length" id="psw-length" min="1" max="2">
         </div>
         <div>
             <label for="uppercase">Include Uppercase Letters:</label>
@@ -31,6 +31,11 @@
         </div>
         <button type="submit">Generate</button>
     </form>
+    <div class="output">
+        <div class="generated-password"></div>
+        <button type="submmit" class="copyBtn">Copy</button>
+    </div>
+    <div class="errorDiv"></div>
     
 </div>
 </body>

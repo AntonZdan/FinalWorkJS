@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+h1{
+    text-align: center;
+    margin: 3em 0em;
+}
+
 body {
     background: rgb(186, 234, 249);
 }
@@ -10,9 +15,7 @@ body {
 .my-password{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0 auto;
     
 }
@@ -58,7 +61,43 @@ button{
 }
 
 button:hover{
-    background-color: rgb(197, 236, 248);
+    
     color: black;
+}
+
+.output{
+    display:flex;
+    justify-content: center;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.generated-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background: rgb(232, 229, 229);
+    width: 800px;
+    height: 30px;
+    padding: 5px;
+    border-right: transparent;
+    border-color: rgb(102, 134, 144);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    white-space: nowrap;
+}
+
+.copyBtn{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 300px;
+    
+}
+
+#error-message,
+#copy-error{
+    color: red;
+    margin-top: 10px;
 }
 
