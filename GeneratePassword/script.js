@@ -42,7 +42,7 @@ form.addEventListener('submit', (event) => {
     const symbolsChars = '!@#$%^&*()_+~`|}{[]\\:;?><,./-=';
 
     let chars = lowerCaseChars;
-    if (includeNumbersValue) {
+    if (includeNumbersValue) { // jeigu true, prideda skaicius.
         chars += numbersChars;
     }
     if (includeUpperCaseValue) {
@@ -53,7 +53,7 @@ form.addEventListener('submit', (event) => {
     }
 
     let password = '';
-    for (let i = 0; i < passwordLengthValue; i++) {
+    for (let i = 0; i < passwordLengthValue; i++) { // kartos cikla, tiek kartu, koks irasytas skaicius
         const randomIndex = Math.floor(Math.random() * chars.length);
         password += chars[randomIndex];
     }
